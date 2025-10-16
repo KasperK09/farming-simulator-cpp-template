@@ -1,24 +1,52 @@
 #include <string>
 
-#include "ansi_clear.hpp"
+#include "farm.hpp"
+#include "plot.hpp"
+#include "soil.hpp"
 
-std::string hello() {
-   return "Hello World!";
-}
-
-void spaces_and_dot(int number_of_spaces, std::string symbol) {
-  ansi_clear();
-  std::string input;
-  for(int i = 0; i < number_of_spaces; i++) {
-    std::cout << " ";
-  }
-  std::cout << symbol << std::endl;
-  std::cout << "Press Enter" << std::endl;
-  std::getline(std::cin, input);
-}
-
-void zoom(std::string symbol) {
-  for(int i = 40; i > 0; i--) {
-    spaces_and_dot(i, symbol);
+Farm::Farm(int rows, int colums) :rows(rows), columns(columns)
+{
+  for(int i = 0; i < rows; i++)
+  {
+    std::vector<plot *> row;
+    for(int j = 0; j < columns; j++)
+    {
+      Soil *soil = new Soil();
+      row.push_back(soil)
+    }
+    plots.push_back(row);
   }
 }
+int Farm::get_number_of_rows()
+{
+  return rows;
+}
+
+int Farm::get_number_of_columns()
+{
+  return columns;
+}
+
+std::string Farm::get_symbol(int row, int column)
+{
+  if(Player->row() == row && player->column() == column)
+  {
+    return "@";
+  } 
+  else
+  {
+    return plots.at(row).at(columns)->symbol();
+  }
+}
+
+void farm::plant(int row, int column, plot *plot)
+{
+  plot *current_plot = ploys.at(row).at(column);
+  plots.at(row).at(column) = plot;
+  delete current_plot;
+}
+
+
+
+
+
