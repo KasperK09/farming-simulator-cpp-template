@@ -16,6 +16,7 @@ FetchContent_Declare(
 FetchContent_MakeAvailable(Catch2)
 
 add_executable(farm_test tests/farm_test.cpp src/farm.cpp)
-add_executable(main main.cpp src/farm.cpp)
+add_executable(main main.cpp src/farm.cpp src/farm_printer.cpp)
+
 
 target_link_libraries(farm_test PRIVATE Catch2::Catch2WithMain)
