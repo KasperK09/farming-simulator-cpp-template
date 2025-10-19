@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.24)
 
-project("Farming Simulator")
+project("Farming Sim")
 
 set(CMAKE_CXX_STANDARD 23)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
@@ -16,6 +16,8 @@ FetchContent_Declare(
 FetchContent_MakeAvailable(Catch2)
 
 add_executable(farm_test tests/farm_test.cpp src/farm.cpp)
+# add_executable(src/legend.cpp)
+# add_executable(farm_printer.cpp)
 add_executable(main main.cpp src/farm.cpp src/farm_printer.cpp)
 
 

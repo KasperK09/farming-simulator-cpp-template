@@ -1,8 +1,8 @@
-#pragma once
+// #pragma once
 
-#include <iostream>
+// #include <iostream>
 
-void ansi_clear()
-{
+// void ansi_clear()
+// {
   
-}
+// }
