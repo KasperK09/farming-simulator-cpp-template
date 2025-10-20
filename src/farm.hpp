@@ -1,6 +1,8 @@
-// #pragma once
+#pragma once
 
-// #include "player.hpp"
+#include <vector>        // <--- add this
+#include "player.hpp"
 
-// void print_farm(const Player &player, int rows, int columns);
-// void move_player(Player &player, char direction, int row, int columns);
+void move_player(Player &player, char direction, int rows, int columns);
+void plant_carrot(std::vector<std::vector<char>> &farm, const Player &player);
+void game_loop();
