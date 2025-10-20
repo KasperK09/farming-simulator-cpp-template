@@ -44,8 +44,8 @@ void game_loop()
     char input;
     bool running = true;
 
-    int steps = 0;    // track how many steps taken this day
-    int day = 1;      // current day number
+    int steps = 0;
+    int day = 1;
 
     while (running)
     {
@@ -68,7 +68,6 @@ void game_loop()
             steps++;
         }
 
-        // Check if a day has ended
         if (steps >= 10)
         {
             std::cout << "\nDay " << day << " has ended!\n\n";

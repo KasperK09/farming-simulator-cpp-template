@@ -10,7 +10,9 @@ void print_farm_static()
     for (int i = 0; i < rows; ++i)
     {
         for (int j = 0; j < columns; ++j)
+        {
             std::cout << ". ";
+        }
         std::cout << std::endl;
     }
 }
@@ -25,10 +27,16 @@ void print_farm(const Player &player, const std::vector<std::vector<char>> &farm
         for (int j = 0; j < columns; ++j)
         {
             if (i == player.get_row() && j == player.get_column())
+            {
                 std::cout << "@ ";
+            }
             else
+            {
                 std::cout << farm[i][j] << ' ';
+            {
         }
         std::cout << '\n';
+        }
     }
+}
 }

@@ -23,9 +23,21 @@ public:
         row += row_change;
         column += column_change;
 
-        if (row < 0) row = 0;
-        if (column < 0) column = 0;
-        if (row >= max_rows) row = max_rows - 1;
-        if (column >= max_columns) column = max_columns - 1;
+        if (row < 0)
+        {
+            row = 0;
+        }
+        if (column < 0)
+        {
+            column = 0;
+        }
+        if (row >= max_rows)
+        {
+            row = max_rows - 1;
+        }
+        if (column >= max_columns)
+        {
+            column = max_columns - 1;
+        }
     }
 };
