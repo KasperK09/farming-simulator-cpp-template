@@ -1,14 +1,20 @@
 #pragma once
 #include <iostream>
 
-void legend()
+class Legend
 {
-    std::cout << "" << std::endl;
-    std::cout << "Welcome to the farming Simulator Program!" << std::endl;
-    std::cout << "Use wasd to move" << std::endl;
-    std::cout << "Player is @" << std::endl;
-    std::cout << "Carrots are v" << std::endl;
-    std::cout << "Press c to plant a carrot on your tile" << std::endl;
-    std::cout << "Day ends when you move 10 steps" << std::endl;
-    std::cout << "" << std::endl;
-}
+public:
+    static void show_legend()
+    {
+        std::cout << "\nWelcome to the Farming Simulator Program!\n"
+                  << "Use WASD to move\n"
+                  << "Player is '@'\n"
+                  << "Carrots are 'v' (seedlings)\n"
+                  << "Mature Carrots are 'V' (mature)\n"
+                  << "Press C to plant a carrot\n"
+                  << "Press H to harvest a mature carrot\n"
+                  << "Day ends when you move 10 steps\n"
+                  << "Press q to quit the game\n\n";
+    }
+};
+

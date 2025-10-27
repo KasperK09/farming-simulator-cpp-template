@@ -9,8 +9,14 @@ private:
 public:
     Player() : row(0), column(0) {}
 
-    int get_row() const { return row; }
-    int get_column() const { return column; }
+    int get_row() const
+    { 
+        return row;
+    }
+    int get_column() const
+    {
+        return column;
+    }
 
     void set_position(int new_row, int new_column)
     {
@@ -18,10 +24,25 @@ public:
         column = new_column;
     }
 
-    void move(int row_change, int column_change, int max_rows, int max_columns)
+    void move(char direction, int max_rows, int max_columns)
     {
-        row += row_change;
-        column += column_change;
+        switch (direction)
+        {
+        case 'w': case 'W':
+            row--;
+            break;
+        case 's': case 'S':
+            row++;
+            break;
+        case 'a': case 'A':
+            column--;
+            break;
+        case 'd': case 'D':
+            column++;
+            break;
+        default:
+            return;
+        }
 
         if (row < 0)
         {

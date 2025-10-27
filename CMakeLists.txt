@@ -14,7 +14,6 @@ FetchContent_Declare(
 
 FetchContent_MakeAvailable(Catch2)
 
-# Main game
 add_executable(farm_game
     main.cpp
     src/farm.cpp
@@ -23,7 +22,6 @@ add_executable(farm_game
 
 target_include_directories(farm_game PRIVATE ${CMAKE_SOURCE_DIR}/src)
 
-# Tests (optional)
 add_executable(farm_test
     tests/farm_test.cpp
     src/farm.cpp
